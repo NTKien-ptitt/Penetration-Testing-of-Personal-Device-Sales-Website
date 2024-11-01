@@ -51,9 +51,6 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 - Kiểm tra xác thực đầu vào
 5. Kiểm tra lỗ hổng
 - Kiểm tra XSS
-Được phản ánh
-Lưu trữ
-DOM
 - Kiểm tra tiêm SQL
 - Kiểm tra tiêm LDAP
 - Kiểm tra tiêm XML
@@ -88,9 +85,9 @@ Ví dụ:
 
 SQL Injection: Kẻ tấn công chèn mã SQL độc hại vào các trường nhập liệu.
 Payload:
-sql
-Sao chép mã
+```bash
 ' OR '1'='1
+```
 Khi mã này được chèn vào một trường tìm kiếm, nó có thể biến một truy vấn hợp lệ thành một truy vấn trả về tất cả các bản ghi, do đó cho phép kẻ tấn công xem dữ liệu nhạy cảm.
 ## 2. Cross-Site Scripting (XSS)
 Mô tả: XSS xảy ra khi ứng dụng web cho phép người dùng chèn mã JavaScript độc hại vào trang web. Mã này sẽ được thực thi trong trình duyệt của người dùng khác, cho phép kẻ tấn công đánh cắp thông tin nhạy cảm hoặc thực hiện hành động thay mặt người dùng.
@@ -99,9 +96,9 @@ Ví dụ:
 
 Kẻ tấn công có thể gửi một liên kết chứa mã JavaScript đến một người dùng khác.
 Payload:
-javascript
-Sao chép mã
+```bash
 <script>alert('XSS Attack!');</script>
+```
 Khi người dùng nhấp vào liên kết, đoạn mã JavaScript này sẽ hiển thị một hộp thoại cảnh báo, nhưng cũng có thể được sử dụng để đánh cắp cookie của người dùng.
 ## 3. Broken Authentication
 Mô tả: Đây là lỗ hổng xảy ra khi hệ thống xác thực không đủ mạnh, cho phép kẻ tấn công chiếm đoạt tài khoản người dùng.
@@ -111,9 +108,9 @@ Ví dụ:
 Sử dụng mật khẩu yếu hoặc không khóa tài khoản sau một số lần đăng nhập thất bại.
 Kẻ tấn công có thể dùng công cụ brute-force như Hydra để thử nhiều tên đăng nhập và mật khẩu.
 Payload:
-bash
-Sao chép mã
+```bash
 hydra -l admin -P passwords.txt http-get://example.com/login
+```
 ## 4. Sensitive Data Exposure
 Mô tả: Lỗi này xảy ra khi thông tin nhạy cảm như mật khẩu, thông tin thẻ tín dụng, hoặc dữ liệu cá nhân không được mã hóa hoặc bảo vệ đúng cách.
 
@@ -128,13 +125,14 @@ Ví dụ:
 
 Một trang web độc hại có thể gửi yêu cầu chuyển tiền đến tài khoản của kẻ tấn công.
 Payload:
-html
-Sao chép mã
+```bash
 <form action="https://example.com/transfer" method="POST">
     <input type="hidden" name="amount" value="1000">
     <input type="submit" value="Send Money">
 </form>
+```
 Nếu người dùng đã đăng nhập, khi họ mở trang này, yêu cầu sẽ được gửi đi mà không cần xác nhận.
+
 ## 6. Security Misconfiguration
 Mô tả: Lỗi cấu hình bảo mật xảy ra khi các cài đặt không được thiết lập đúng cách, dẫn đến các điểm yếu trong hệ thống.
 
@@ -142,15 +140,16 @@ Ví dụ:
 
 Để lại thông tin cấu hình mặc định (như username: admin, password: admin) trên ứng dụng.
 Kẻ tấn công có thể dễ dàng truy cập vào tài khoản quản trị và chiếm quyền kiểm soát.
+
 ## 7. Insecure Direct Object References (IDOR)
 Mô tả: IDOR cho phép kẻ tấn công truy cập vào các tài nguyên mà họ không nên được phép truy cập, bằng cách sửa đổi các tham số trong URL.
 
 Ví dụ:
 
 Một URL yêu cầu thông tin người dùng có thể trông như sau:
-bash
-Sao chép mã
+```bash
 https://example.com/profile?id=123
+```
 Kẻ tấn công có thể thay đổi ID thành một giá trị khác (ví dụ, id=124) để truy cập thông tin của người dùng khác.
 ## 8. Insufficient Logging & Monitoring
 Mô tả: Thiếu việc ghi chép và theo dõi các hoạt động quan trọng có thể khiến việc phát hiện và ứng phó với các cuộc tấn công trở nên khó khăn.
@@ -158,6 +157,7 @@ Mô tả: Thiếu việc ghi chép và theo dõi các hoạt động quan trọn
 Ví dụ:
 
 Nếu một ứng dụng không ghi lại các lần đăng nhập thất bại hoặc không cảnh báo khi có nhiều lần truy cập không hợp lệ, kẻ tấn công có thể dễ dàng tấn công mà không bị phát hiện.
+
 ## 9. Remote Code Execution (RCE)
 Mô tả: Lỗi RCE cho phép kẻ tấn công chạy mã độc trên server thông qua các yêu cầu không được kiểm tra.
 
@@ -165,9 +165,9 @@ Ví dụ:
 
 Một trang web có chức năng tải lên tệp mà không kiểm tra loại tệp có thể cho phép kẻ tấn công tải lên một script PHP độc hại.
 Payload:
-php
-Sao chép mã
+```bash
 <?php system($_GET['cmd']); ?>
+```
 Khi script này được chạy, kẻ tấn công có thể gửi yêu cầu để thực thi các lệnh trên server.
 ## 10. Directory Traversal
 Mô tả: Lỗi này cho phép kẻ tấn công truy cập vào các file và thư mục trên server không được phép bằng cách thay đổi đường dẫn.
@@ -175,9 +175,9 @@ Mô tả: Lỗi này cho phép kẻ tấn công truy cập vào các file và th
 Ví dụ:
 
 Một yêu cầu để tải về một file cụ thể có thể trông như sau:
-arduino
-Sao chép mã
+```bash
 https://example.com/download?file=report.pdf
+```
 Nếu ứng dụng không kiểm tra đúng cách, kẻ tấn công có thể thay đổi tham số thành ../../etc/passwd để truy cập vào file nhạy cảm của hệ thống.
 
 # Một số biện pháp phòng thủ
@@ -185,63 +185,72 @@ Nếu ứng dụng không kiểm tra đúng cách, kẻ tấn công có thể th
 ## 1. Injection
 Mô tả: Lỗi Injection xảy ra khi kẻ tấn công có thể chèn mã độc vào truy vấn hoặc lệnh mà ứng dụng thực thi, dẫn đến thực hiện các hành động không mong muốn.
 Biện pháp phòng ngừa:
-Sử dụng Prepared Statements: Đây là phương pháp tốt nhất để ngăn chặn SQL Injection. Ví dụ trong PHP:
-php
-Sao chép mã
+Sử dụng `Prepared Statements`: Đây là phương pháp tốt nhất để ngăn chặn SQL Injection. Ví dụ trong PHP:
+```bash
 $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
 $stmt->execute(['email' => $userInput]);
+```
 Kiểm tra và làm sạch dữ liệu đầu vào: Xác minh dữ liệu nhập vào có hợp lệ hay không và loại bỏ các ký tự không cần thiết.
+
 ## 2. Cross-Site Scripting (XSS)
 Mô tả: Lỗi XSS cho phép kẻ tấn công chèn mã JavaScript vào trang web, mà mã này sẽ được thực thi trong trình duyệt của người dùng khác.
 Biện pháp phòng ngừa:
-Mã hóa đầu ra: Sử dụng htmlspecialchars() trong PHP để đảm bảo rằng các ký tự đặc biệt được mã hóa.
-php
-Sao chép mã
+Mã hóa đầu ra: Sử dụng `htmlspecialchars()` trong PHP để đảm bảo rằng các ký tự đặc biệt được mã hóa.
+```bash
 echo htmlspecialchars($userInput, ENT_QUOTES, 'UTF-8');
-Sử dụng Content Security Policy (CSP): Thiết lập CSP trong header HTTP để chỉ cho phép tải mã từ các nguồn đáng tin cậy.
-css
-Sao chép mã
+```
+Sử dụng `Content Security Policy (CSP)`: Thiết lập CSP trong header HTTP để chỉ cho phép tải mã từ các nguồn đáng tin cậy.
+```bash
 Content-Security-Policy: script-src 'self';
+```
+
 ## 3. Broken Authentication
 Mô tả: Hệ thống xác thực yếu có thể bị chiếm đoạt tài khoản người dùng.
 Biện pháp phòng ngừa:
-Sử dụng xác thực hai yếu tố (2FA): Đưa ra yêu cầu xác thực thứ hai (như mã gửi qua SMS).
+Sử dụng xác thực hai yếu tố `(2FA)`: Đưa ra yêu cầu xác thực thứ hai (như mã gửi qua SMS).
 Khóa tài khoản sau nhiều lần đăng nhập thất bại: Sau 5 lần đăng nhập không thành công, tài khoản sẽ bị khóa trong một khoảng thời gian.
+
 ## 4. Sensitive Data Exposure
 Mô tả: Dữ liệu nhạy cảm không được bảo vệ có thể bị rò rỉ.
 Biện pháp phòng ngừa:
 Mã hóa dữ liệu nhạy cảm: Sử dụng HTTPS cho tất cả các giao tiếp và mã hóa thông tin nhạy cảm trước khi lưu vào cơ sở dữ liệu.
 Hạn chế thu thập dữ liệu: Chỉ thu thập thông tin cần thiết và bảo vệ dữ liệu đó bằng cách mã hóa.
+
 ## 5. Cross-Site Request Forgery (CSRF)
 Mô tả: CSRF cho phép kẻ tấn công gửi yêu cầu giả mạo từ người dùng đã đăng nhập.
 Biện pháp phòng ngừa:
-Sử dụng token CSRF: Mỗi form gửi dữ liệu đều phải có token CSRF.
-html
-Sao chép mã
+Sử dụng `token CSRF`: Mỗi form gửi dữ liệu đều phải có token CSRF.
+```bash
 <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
-Kiểm tra header HTTP Referer: Xác minh rằng yêu cầu đến từ trang của bạn.
+```
+Kiểm tra `header HTTP Referer`: Xác minh rằng yêu cầu đến từ trang của bạn.
+
 ## 6. Security Misconfiguration
 Mô tả: Cấu hình bảo mật không đúng có thể dẫn đến lỗ hổng.
 Biện pháp phòng ngừa:
 Rà soát cấu hình thường xuyên: Kiểm tra các cài đặt và cập nhật chúng theo hướng dẫn an ninh.
 Gỡ bỏ dịch vụ không cần thiết: Tắt các dịch vụ mà bạn không sử dụng.
+
 ## 7. Insecure Direct Object References (IDOR)
 Mô tả: Kẻ tấn công có thể truy cập vào các đối tượng mà họ không có quyền truy cập bằng cách thay đổi tham số trong URL.
 Biện pháp phòng ngừa:
 Kiểm tra quyền truy cập: Trước khi cho phép người dùng truy cập vào tài nguyên, hãy kiểm tra xem họ có quyền hay không.
 Sử dụng ID ngẫu nhiên: Sử dụng các giá trị ngẫu nhiên hoặc mã hóa cho các tham số trong URL.
+
 ## 8. Insufficient Logging & Monitoring
 Mô tả: Thiếu ghi chép có thể khiến việc phát hiện các cuộc tấn công trở nên khó khăn.
 Biện pháp phòng ngừa:
 Ghi lại hoạt động quan trọng: Ghi lại tất cả các hoạt động như đăng nhập và truy cập dữ liệu nhạy cảm.
 Thiết lập cảnh báo: Cảnh báo khi có các hoạt động đáng ngờ trong nhật ký, chẳng hạn như nhiều lần đăng nhập thất bại từ một địa chỉ IP.
+
 ## 9. Remote Code Execution (RCE)
 Mô tả: Lỗi này cho phép kẻ tấn công chạy mã độc trên server.
 Biện pháp phòng ngừa:
 Kiểm tra loại tệp tải lên: Chỉ cho phép các loại tệp an toàn và không cho phép tải lên mã độc.
 Cách ly môi trường thực thi: Sử dụng container hoặc môi trường ảo hóa để cách ly việc thực thi mã.
+
 ## 10. Directory Traversal
 Mô tả: Kẻ tấn công có thể truy cập vào các tệp và thư mục không được phép bằng cách thay đổi đường dẫn.
 Biện pháp phòng ngừa:
 Kiểm tra và giới hạn đường dẫn: Xác minh rằng các đường dẫn chỉ đến các thư mục cho phép.
-Sử dụng các hàm an toàn: Sử dụng các hàm như basename() để loại bỏ đường dẫn không hợp lệ.
+Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để loại bỏ đường dẫn không hợp lệ.
