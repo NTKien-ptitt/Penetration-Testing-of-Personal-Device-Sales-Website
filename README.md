@@ -79,6 +79,8 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 
 # Các lổ hổng OWASP
 ## 1. Injection
+![image](https://github.com/user-attachments/assets/9cc54509-ccf5-4883-86f9-39cebfd950db)
+
 Mô tả: Lỗi Injection xảy ra khi kẻ tấn công có thể chèn mã độc vào các truy vấn hoặc lệnh mà ứng dụng thực thi. Điều này cho phép họ thực hiện các lệnh không mong muốn trong hệ thống.
 
 Ví dụ:
@@ -89,7 +91,10 @@ Payload:
 ' OR '1'='1
 ```
 Khi mã này được chèn vào một trường tìm kiếm, nó có thể biến một truy vấn hợp lệ thành một truy vấn trả về tất cả các bản ghi, do đó cho phép kẻ tấn công xem dữ liệu nhạy cảm.
+
 ## 2. Cross-Site Scripting (XSS)
+![image](https://github.com/user-attachments/assets/b2bc0ac6-2595-4b82-a82e-745985c76362)
+
 Mô tả: XSS xảy ra khi ứng dụng web cho phép người dùng chèn mã JavaScript độc hại vào trang web. Mã này sẽ được thực thi trong trình duyệt của người dùng khác, cho phép kẻ tấn công đánh cắp thông tin nhạy cảm hoặc thực hiện hành động thay mặt người dùng.
 
 Ví dụ:
@@ -101,6 +106,8 @@ Payload:
 ```
 Khi người dùng nhấp vào liên kết, đoạn mã JavaScript này sẽ hiển thị một hộp thoại cảnh báo, nhưng cũng có thể được sử dụng để đánh cắp cookie của người dùng.
 ## 3. Broken Authentication
+![image](https://github.com/user-attachments/assets/fc4f09fa-0a4b-4347-a114-cc0984418609)
+
 Mô tả: Đây là lỗ hổng xảy ra khi hệ thống xác thực không đủ mạnh, cho phép kẻ tấn công chiếm đoạt tài khoản người dùng.
 
 Ví dụ:
@@ -112,13 +119,18 @@ Payload:
 hydra -l admin -P passwords.txt http-get://example.com/login
 ```
 ## 4. Sensitive Data Exposure
+![image](https://github.com/user-attachments/assets/3a576595-08f7-41dc-ad37-56dff6b0b9ea)
+
 Mô tả: Lỗi này xảy ra khi thông tin nhạy cảm như mật khẩu, thông tin thẻ tín dụng, hoặc dữ liệu cá nhân không được mã hóa hoặc bảo vệ đúng cách.
 
 Ví dụ:
 
 Một trang web gửi thông tin thẻ tín dụng qua HTTP thay vì HTTPS, cho phép kẻ tấn công chặn và xem thông tin này.
 Kẻ tấn công có thể sử dụng công cụ như Wireshark để theo dõi và phân tích lưu lượng mạng.
+
 ## 5. Cross-Site Request Forgery (CSRF)
+![image](https://github.com/user-attachments/assets/34893e53-801d-40be-83cd-4032f3686be1)
+
 Mô tả: CSRF cho phép kẻ tấn công gửi yêu cầu giả mạo từ một người dùng đã đăng nhập đến ứng dụng web mà không có sự đồng ý của họ.
 
 Ví dụ:
@@ -134,6 +146,8 @@ Payload:
 Nếu người dùng đã đăng nhập, khi họ mở trang này, yêu cầu sẽ được gửi đi mà không cần xác nhận.
 
 ## 6. Security Misconfiguration
+![image](https://github.com/user-attachments/assets/0283141e-83fc-4efd-9496-cb1e42fadce1)
+
 Mô tả: Lỗi cấu hình bảo mật xảy ra khi các cài đặt không được thiết lập đúng cách, dẫn đến các điểm yếu trong hệ thống.
 
 Ví dụ:
@@ -142,6 +156,8 @@ Ví dụ:
 Kẻ tấn công có thể dễ dàng truy cập vào tài khoản quản trị và chiếm quyền kiểm soát.
 
 ## 7. Insecure Direct Object References (IDOR)
+![image](https://github.com/user-attachments/assets/a26cfc82-80ba-4044-80f7-8a8ec4e8ba13)
+
 Mô tả: IDOR cho phép kẻ tấn công truy cập vào các tài nguyên mà họ không nên được phép truy cập, bằng cách sửa đổi các tham số trong URL.
 
 Ví dụ:
@@ -151,7 +167,10 @@ Một URL yêu cầu thông tin người dùng có thể trông như sau:
 https://example.com/profile?id=123
 ```
 Kẻ tấn công có thể thay đổi ID thành một giá trị khác (ví dụ, id=124) để truy cập thông tin của người dùng khác.
+
 ## 8. Insufficient Logging & Monitoring
+![image](https://github.com/user-attachments/assets/d083351a-f1bb-489c-bce2-42ae36387963)
+
 Mô tả: Thiếu việc ghi chép và theo dõi các hoạt động quan trọng có thể khiến việc phát hiện và ứng phó với các cuộc tấn công trở nên khó khăn.
 
 Ví dụ:
@@ -159,6 +178,8 @@ Ví dụ:
 Nếu một ứng dụng không ghi lại các lần đăng nhập thất bại hoặc không cảnh báo khi có nhiều lần truy cập không hợp lệ, kẻ tấn công có thể dễ dàng tấn công mà không bị phát hiện.
 
 ## 9. Remote Code Execution (RCE)
+![image](https://github.com/user-attachments/assets/4281d2aa-033b-47e8-917b-c6be8bbd9729)
+
 Mô tả: Lỗi RCE cho phép kẻ tấn công chạy mã độc trên server thông qua các yêu cầu không được kiểm tra.
 
 Ví dụ:
@@ -169,7 +190,10 @@ Payload:
 <?php system($_GET['cmd']); ?>
 ```
 Khi script này được chạy, kẻ tấn công có thể gửi yêu cầu để thực thi các lệnh trên server.
+
 ## 10. Directory Traversal
+![image](https://github.com/user-attachments/assets/c3570613-53f1-46a6-85d3-0e0e2046d452)
+
 Mô tả: Lỗi này cho phép kẻ tấn công truy cập vào các file và thư mục trên server không được phép bằng cách thay đổi đường dẫn.
 
 Ví dụ:
