@@ -3,7 +3,7 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 
 - [Mục tiêu Kiểm thử Xâm nhập](#muc-tieu-kiem-thu-xam-nhap)
 - [Công cụ sử dụng trong Kiểm thử Xâm nhập](#cong-cu-su-dung-trong-kiem-thu-xam-nhap)
-- [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#ke-hoach-kiem-thu-xam-nhap-cho-website-ban-1. 
+- [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#Kế-hoạch-Kiểm-thử-Xâm-nhập-cho-Website-Bán-Thiết-Bị-Cá-Nhân-dựa-trên-OWASP-Testing-Guide) 
 - [Các Lỗ Hổng OWASP](#cac-lo-hong-owasp)
 - [Một số Biện pháp Phòng thủ](#mot-so-bien-phap-phong-thu)
 
