@@ -212,7 +212,9 @@ Nếu ứng dụng không kiểm tra đúng cách, kẻ tấn công có thể th
 
 ## 1. Injection
 Mô tả: Lỗi Injection xảy ra khi kẻ tấn công có thể chèn mã độc vào truy vấn hoặc lệnh mà ứng dụng thực thi, dẫn đến thực hiện các hành động không mong muốn.
+
 Biện pháp phòng ngừa:
+
 Sử dụng `Prepared Statements`: Đây là phương pháp tốt nhất để ngăn chặn SQL Injection. Ví dụ trong PHP:
 ```bash
 $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
@@ -222,7 +224,9 @@ Kiểm tra và làm sạch dữ liệu đầu vào: Xác minh dữ liệu nhập
 
 ## 2. Cross-Site Scripting (XSS)
 Mô tả: Lỗi XSS cho phép kẻ tấn công chèn mã JavaScript vào trang web, mà mã này sẽ được thực thi trong trình duyệt của người dùng khác.
+
 Biện pháp phòng ngừa:
+
 Mã hóa đầu ra: Sử dụng `htmlspecialchars()` trong PHP để đảm bảo rằng các ký tự đặc biệt được mã hóa.
 ```bash
 echo htmlspecialchars($userInput, ENT_QUOTES, 'UTF-8');
@@ -234,19 +238,27 @@ Content-Security-Policy: script-src 'self';
 
 ## 3. Broken Authentication
 Mô tả: Hệ thống xác thực yếu có thể bị chiếm đoạt tài khoản người dùng.
+
 Biện pháp phòng ngừa:
+
 Sử dụng xác thực hai yếu tố `(2FA)`: Đưa ra yêu cầu xác thực thứ hai (như mã gửi qua SMS).
+
 Khóa tài khoản sau nhiều lần đăng nhập thất bại: Sau 5 lần đăng nhập không thành công, tài khoản sẽ bị khóa trong một khoảng thời gian.
 
 ## 4. Sensitive Data Exposure
 Mô tả: Dữ liệu nhạy cảm không được bảo vệ có thể bị rò rỉ.
+
 Biện pháp phòng ngừa:
+
 Mã hóa dữ liệu nhạy cảm: Sử dụng HTTPS cho tất cả các giao tiếp và mã hóa thông tin nhạy cảm trước khi lưu vào cơ sở dữ liệu.
+
 Hạn chế thu thập dữ liệu: Chỉ thu thập thông tin cần thiết và bảo vệ dữ liệu đó bằng cách mã hóa.
 
 ## 5. Cross-Site Request Forgery (CSRF)
 Mô tả: CSRF cho phép kẻ tấn công gửi yêu cầu giả mạo từ người dùng đã đăng nhập.
+
 Biện pháp phòng ngừa:
+
 Sử dụng `token CSRF`: Mỗi form gửi dữ liệu đều phải có token CSRF.
 ```bash
 <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
@@ -255,30 +267,45 @@ Kiểm tra `header HTTP Referer`: Xác minh rằng yêu cầu đến từ trang 
 
 ## 6. Security Misconfiguration
 Mô tả: Cấu hình bảo mật không đúng có thể dẫn đến lỗ hổng.
+
 Biện pháp phòng ngừa:
+
 Rà soát cấu hình thường xuyên: Kiểm tra các cài đặt và cập nhật chúng theo hướng dẫn an ninh.
+
 Gỡ bỏ dịch vụ không cần thiết: Tắt các dịch vụ mà bạn không sử dụng.
 
 ## 7. Insecure Direct Object References (IDOR)
 Mô tả: Kẻ tấn công có thể truy cập vào các đối tượng mà họ không có quyền truy cập bằng cách thay đổi tham số trong URL.
+
 Biện pháp phòng ngừa:
+
 Kiểm tra quyền truy cập: Trước khi cho phép người dùng truy cập vào tài nguyên, hãy kiểm tra xem họ có quyền hay không.
+
 Sử dụng ID ngẫu nhiên: Sử dụng các giá trị ngẫu nhiên hoặc mã hóa cho các tham số trong URL.
 
 ## 8. Insufficient Logging & Monitoring
 Mô tả: Thiếu ghi chép có thể khiến việc phát hiện các cuộc tấn công trở nên khó khăn.
+
 Biện pháp phòng ngừa:
+
 Ghi lại hoạt động quan trọng: Ghi lại tất cả các hoạt động như đăng nhập và truy cập dữ liệu nhạy cảm.
+
 Thiết lập cảnh báo: Cảnh báo khi có các hoạt động đáng ngờ trong nhật ký, chẳng hạn như nhiều lần đăng nhập thất bại từ một địa chỉ IP.
 
 ## 9. Remote Code Execution (RCE)
 Mô tả: Lỗi này cho phép kẻ tấn công chạy mã độc trên server.
+
 Biện pháp phòng ngừa:
+
 Kiểm tra loại tệp tải lên: Chỉ cho phép các loại tệp an toàn và không cho phép tải lên mã độc.
+
 Cách ly môi trường thực thi: Sử dụng container hoặc môi trường ảo hóa để cách ly việc thực thi mã.
 
 ## 10. Directory Traversal
 Mô tả: Kẻ tấn công có thể truy cập vào các tệp và thư mục không được phép bằng cách thay đổi đường dẫn.
+
 Biện pháp phòng ngừa:
+
 Kiểm tra và giới hạn đường dẫn: Xác minh rằng các đường dẫn chỉ đến các thư mục cho phép.
+
 Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để loại bỏ đường dẫn không hợp lệ.
