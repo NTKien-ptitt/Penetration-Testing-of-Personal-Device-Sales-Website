@@ -1,11 +1,11 @@
 # Kiểm thử Xâm nhập Website Bán Thiết Bị Cá Nhân
 Kiểm thử xâm nhập (penetration testing) là một phương pháp quan trọng trong an ninh thông tin, nhằm xác định và đánh giá các lỗ hổng bảo mật trong một ứng dụng hoặc hệ thống. Trong bối cảnh một website bán thiết bị cá nhân, việc thực hiện kiểm thử xâm nhập không chỉ giúp bảo vệ dữ liệu người dùng mà còn đảm bảo tính toàn vẹn và sẵn sàng của dịch vụ.
 
-## [Mục tiêu Kiểm thử Xâm nhập](#muc-tieu-kiem-thu-xam-nhap)
-### [Công cụ sử dụng trong Kiểm thử Xâm nhập](#cong-cu-su-dung-trong-kiem-thu-xam-nhap)
-## [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#ke-hoach-kiem-thu-xam-nhap-cho-website-ban-1. 
-# [Các Lỗ Hổng OWASP](#cac-lo-hong-owasp)
-# [Một số Biện pháp Phòng thủ](#mot-so-bien-phap-phong-thu)
+- [Mục tiêu Kiểm thử Xâm nhập](#muc-tieu-kiem-thu-xam-nhap)
+- [Công cụ sử dụng trong Kiểm thử Xâm nhập](#cong-cu-su-dung-trong-kiem-thu-xam-nhap)
+- [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#ke-hoach-kiem-thu-xam-nhap-cho-website-ban-1. 
+- [Các Lỗ Hổng OWASP](#cac-lo-hong-owasp)
+- [Một số Biện pháp Phòng thủ](#mot-so-bien-phap-phong-thu)
 
 
 ## Mục tiêu Kiểm thử Xâm nhập
