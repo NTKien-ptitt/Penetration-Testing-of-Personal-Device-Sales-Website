@@ -5,7 +5,11 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 - Xác định lỗ hổng bảo mật: Tìm kiếm các điểm yếu trong ứng dụng web có thể bị khai thác bởi kẻ tấn công.
 - Đánh giá rủi ro: Xác định mức độ nghiêm trọng của từng lỗ hổng và khả năng bị khai thác.
 - Cải thiện an ninh: Đề xuất các biện pháp khắc phục để giảm thiểu rủi ro.
+
+  
 ### Công cụ sử dụng trong Kiểm thử Xâm nhập
+![image](https://github.com/user-attachments/assets/8d7a4c4b-4bb3-47a9-be1e-c085327b8ce0)
+
 - Burp Suite: Là một công cụ phổ biến trong kiểm thử xâm nhập, Burp Suite cho phép người dùng kiểm tra và sửa đổi các yêu cầu HTTP/HTTPS giữa trình duyệt và server. Nó cung cấp nhiều tính năng như quét lỗ hổng, phân tích traffic, và hỗ trợ tạo payload.
 
 - OWASP ZAP (Zed Attack Proxy): Đây là một công cụ mã nguồn mở, giúp kiểm tra lỗ hổng bảo mật trên ứng dụng web. ZAP có thể tự động quét và phát hiện các vấn đề an ninh, cũng như cho phép người dùng thực hiện các tấn công thủ công.
