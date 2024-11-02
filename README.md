@@ -316,3 +316,10 @@ Biện pháp phòng ngừa:
 Kiểm tra và giới hạn đường dẫn: Xác minh rằng các đường dẫn chỉ đến các thư mục cho phép.
 
 Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để loại bỏ đường dẫn không hợp lệ.
+
+# Tài liệu tham khảo
+
+[Tài liệu kiểm thử xâm nhập cho website](https://github.com/NTKien-ptitt/Penetration-Testing-of-Personal-Device-Sales-Website/tree/main/Documents)
+
+   Tài liệu này bao gồm các thông tin và hướng dẫn liên quan đến kiểm thử xâm nhập cho website.
+
