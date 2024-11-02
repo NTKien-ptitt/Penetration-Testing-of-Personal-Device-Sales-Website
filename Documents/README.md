@@ -1,8 +1,10 @@
 ##                                                                                      Tài liệu tham khảo
 
-- 1.[PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings): Kho lưu trữ này chứa nhiều payload hữu ích cho các mục đích kiểm thử bảo mật, bao gồm XSS, SQL Injection, SSRF, và nhiều loại tấn công khác.
-- 2.[OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing): Hướng dẫn kiểm thử bảo mật web do OWASP phát triển, bao gồm các phương pháp và quy trình kiểm thử.
-- 3.[OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/): Phiên bản trực tuyến của Hướng dẫn Kiểm thử Bảo mật Web từ OWASP, cung cấp tài liệu chi tiết về từng kỹ thuật kiểm thử.
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings): Kho lưu trữ này chứa nhiều payload hữu ích cho các mục đích kiểm thử bảo mật, bao gồm XSS, SQL Injection, SSRF, và nhiều loại tấn công khác.
+- 
+- [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing): Hướng dẫn kiểm thử bảo mật web do OWASP phát triển, bao gồm các phương pháp và quy trình kiểm thử.
+- 
+- [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/): Phiên bản trực tuyến của Hướng dẫn Kiểm thử Bảo mật Web từ OWASP, cung cấp tài liệu chi tiết về từng kỹ thuật kiểm thử.
 
 ## 1. PayloadsAllTheThings
 Giới thiệu:
@@ -14,7 +16,7 @@ Bao gồm nhiều kỹ thuật và payload có tính thực tiễn cao, hỗ tr�
 Phân chia payloads theo từng loại tấn công cụ thể, giúp người dùng dễ dàng tìm kiếm và áp dụng.
 Được cộng đồng bảo mật cập nhật liên tục, dựa trên các xu hướng và lỗ hổng mới nhất.
 Ứng dụng trong dự án của bạn:
-Kho tài liệu này là nguồn tài nguyên phong phú giúp bạn tìm ra các payload hiệu quả cho từng loại kiểm thử bảo mật, góp phần vào quá trình đánh giá độ an toàn của website bán thiết bị cá nhân của bạn.
+Kho tài liệu này là nguồn tài nguyên phong phú giúp bạn tìm ra các payload hiệu quả cho từng loại kiểm thử bảo mật, góp phần vào quá trình đánh giá độ an toàn của website.
 
 ## 2. OWASP Web Security Testing Guide - GitHub
 Giới thiệu:
@@ -26,7 +28,7 @@ Bao gồm các tiêu chuẩn, phương pháp và quy trình kiểm thử bảo m
 Chứa các hướng dẫn về kiểm thử từ giai đoạn khám phá đến xác thực từng lỗ hổng bảo mật.
 Hỗ trợ nhiều loại kiểm thử như kiểm tra xác thực, quản lý phiên, mã hóa, bảo mật dữ liệu, và kiểm thử mã nguồn.
 Ứng dụng trong dự án của bạn:
-Bằng cách tham khảo hướng dẫn này, bạn có thể áp dụng quy trình kiểm thử bảo mật toàn diện cho website bán thiết bị cá nhân, bảo đảm rằng bạn không chỉ kiểm tra lỗ hổng mà còn thực hiện các bước khắc phục và bảo vệ thích hợp.
+Bằng cách tham khảo hướng dẫn này, có thể áp dụng quy trình kiểm thử bảo mật toàn diện cho website, bảo đảm rằng không chỉ kiểm tra lỗ hổng mà còn thực hiện các bước khắc phục và bảo vệ thích hợp.
 
 ## 3. OWASP Web Security Testing Guide - Website
 Giới thiệu:
@@ -34,9 +36,9 @@ Giới thiệu:
 
 Điểm nổi bật:
 
-Phiên bản trực tuyến có khả năng tìm kiếm nhanh, thuận tiện khi bạn muốn tra cứu từng phần.
+Phiên bản trực tuyến có khả năng tìm kiếm nhanh, thuận tiện khi muốn tra cứu từng phần.
 Bao gồm các phần kiểm thử với các ví dụ thực tiễn và minh họa cụ thể, giúp người dùng dễ hình dung.
 Có nội dung phân tích các loại lỗ hổng thường gặp và cách phòng ngừa, ví dụ như lỗi mã hóa dữ liệu, quản lý lỗi đăng nhập, bảo vệ truy cập API.
 Ứng dụng trong dự án của bạn:
-Phiên bản trực tuyến giúp bạn tiếp cận nhanh chóng các hướng dẫn kiểm thử bảo mật khi cần, đặc biệt hữu ích trong việc so sánh hoặc đối chiếu quy trình kiểm thử bảo mật bạn thực hiện với các phương pháp chuẩn do OWASP đề xuất.
+Phiên bản trực tuyến giúp tiếp cận nhanh chóng các hướng dẫn kiểm thử bảo mật khi cần, đặc biệt hữu ích trong việc so sánh hoặc đối chiếu quy trình kiểm thử bảo mật bạn thực hiện với các phương pháp chuẩn do OWASP đề xuất.
 
