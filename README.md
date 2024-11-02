@@ -21,7 +21,7 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 
 - OWASP ZAP (Zed Attack Proxy): Đây là một công cụ mã nguồn mở, giúp kiểm tra lỗ hổng bảo mật trên ứng dụng web. ZAP có thể tự động quét và phát hiện các vấn đề an ninh, cũng như cho phép người dùng thực hiện các tấn công thủ công.
 
-- Nmap: Dùng để quét mạng và xác định các dịch vụ đang chạy trên server. Nmap giúp tìm ra các cổng mở và ứng dụng, từ đó có thể đánh giá các lỗ hổng liên quan.
+- Nmap: Dùng để quét mạng và xác định các dịch vụ đang chạy trên server. Nmap giúp tìm ra các cổng mở, CVE và ứng dụng đang chạy, từ đó có thể đánh giá các lỗ hổng liên quan.
 
 - Metasploit: Là một framework mạnh mẽ cho phép khai thác các lỗ hổng bảo mật đã được xác định. Nó cung cấp nhiều module cho việc phát hiện và khai thác lỗ hổng.
 
