@@ -1,10 +1,13 @@
 ##                                                                                      Tài liệu tham khảo
 
-- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) : Kho lưu trữ này chứa nhiều payload hữu ích cho các mục đích kiểm thử bảo mật, bao gồm XSS, SQL Injection, SSRF, và nhiều loại tấn công khác.
-  
-- [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing) : Hướng dẫn kiểm thử bảo mật web do OWASP phát triển, bao gồm các phương pháp và quy trình kiểm thử.
-  
-- [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/) : Phiên bản trực tuyến của Hướng dẫn Kiểm thử Bảo mật Web từ OWASP, cung cấp tài liệu chi tiết về từng kỹ thuật kiểm thử.
+## Tham khảo
+
+1. [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) : Kho lưu trữ này chứa nhiều payload hữu ích cho các mục đích kiểm thử bảo mật, bao gồm XSS, SQL Injection, SSRF, và nhiều loại tấn công khác.
+
+2. [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing) : Hướng dẫn kiểm thử bảo mật web do OWASP phát triển, bao gồm các phương pháp và quy trình kiểm thử.
+
+3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/) : Phiên bản trực tuyến của Hướng dẫn Kiểm thử Bảo mật Web từ OWASP, cung cấp tài liệu chi tiết về từng kỹ thuật kiểm thử.
+
 
 ## 1. PayloadsAllTheThings
 Giới thiệu:
