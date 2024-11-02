@@ -6,7 +6,7 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 - [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#Kế-hoạch-Kiểm-thử-Xâm-nhập-cho-Website-Bán-Thiết-Bị-Cá-Nhân-dựa-trên-OWASP-Testing-Guide) 
 - [Các Lỗ Hổng OWASP](#cac-lo-hong-owasp)
 - [Một số Biện pháp Phòng thủ](#mot-so-bien-phap-phong-thu)
-
+- [Tài liệu tham khảo](#Tài-liệu-tham-khảo)
 
 ## Mục tiêu Kiểm thử Xâm nhập
 - Xác định lỗ hổng bảo mật: Tìm kiếm các điểm yếu trong ứng dụng web có thể bị khai thác bởi kẻ tấn công.
@@ -321,5 +321,5 @@ Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để lo
 
 [Tài liệu kiểm thử xâm nhập cho website](https://github.com/NTKien-ptitt/Penetration-Testing-of-Personal-Device-Sales-Website/tree/main/Documents)
 
-   Tài liệu này bao gồm các thông tin và hướng dẫn liên quan đến kiểm thử xâm nhập cho website.
+-> Tài liệu này bao gồm các thông tin và hướng dẫn liên quan đến kiểm thử xâm nhập cho website.
 
