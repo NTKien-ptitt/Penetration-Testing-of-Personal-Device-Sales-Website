@@ -332,9 +332,10 @@ Kiểm tra và giới hạn đường dẫn: Xác minh rằng các đường d�
 
 Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để loại bỏ đường dẫn không hợp lệ.
 
-# Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
+# giới thiệu về cvss 3.1
 - Để đánh giá lỗ hổng máy tính theo **CVSS 3.1 (Common Vulnerability Scoring System)**, bạn sẽ cần đánh giá ba yếu tố chính: **Base Score** (Điểm cơ bản), **Temporal Score** (Điểm thời gian), và **Environmental Score** (Điểm môi trường).
-- Thang điểm CVSS 3.1: CVSS (Common Vulnerability Scoring System) version 3.1 sử dụng thang điểm từ 0.0 đến 10.0, được phân loại như sau:
+# cách tính điểm cvss 3.1
+- CVSS (Common Vulnerability Scoring System) version 3.1 sử dụng thang điểm từ 0.0 đến 10.0, được phân loại như sau:
 
 | Mức độ    | Điểm số      |
 |-----------|--------------|
