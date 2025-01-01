@@ -15,7 +15,19 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 
 3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/).
 
-#[Đánh giá lỗ hổng theo máy tính theo CVSS 3.1](#Đánh-giá-lỗ-hổng-theo-máy-tính-theo-CVSS-3.1)
+# Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
+
+- [Thang điểm CVSS 3.1](#thang-điểm-cvss-31)
+- [Các nhóm chỉ số chính](#các-nhóm-chỉ-số-chính)
+  - [1. Base Metrics Group (Nhóm chỉ số cơ bản)](#1-base-metrics-group-nhóm-chỉ-số-cơ-bản)
+    - [Exploitation Metrics (Chỉ số khai thác)](#exploitation-metrics-chỉ-số-khai-thác) 
+    - [Impact Metrics (Chỉ số tác động)](#impact-metrics-chỉ-số-tác-động)
+  - [2. Temporal Metrics Group (Nhóm chỉ số thời gian)](#2-temporal-metrics-group-nhóm-chỉ-số-thời-gian)
+  - [3. Environmental Metrics Group (Nhóm chỉ số môi trường)](#3-environmental-metrics-group-nhóm-chỉ-số-môi-trường)
+    - [Modified Base Metrics](#modified-base-metrics)
+    - [Security Requirements (Yêu cầu bảo mật)](#security-requirements-yêu-cầu-bảo-mật)
+- [Công thức tính](#công-thức-tính)
+- [Ví dụ đánh giá](#ví-dụ-đánh-giá)
 ---
 ## Mục tiêu Kiểm thử Xâm nhập
 - Xác định lỗ hổng bảo mật: Tìm kiếm các điểm yếu trong ứng dụng web có thể bị khai thác bởi kẻ tấn công.
@@ -328,6 +340,15 @@ Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để lo
 
 # Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
 - Để đánh giá lỗ hổng máy tính theo **CVSS 3.1 (Common Vulnerability Scoring System)**, bạn sẽ cần đánh giá ba yếu tố chính: **Base Score** (Điểm cơ bản), **Temporal Score** (Điểm thời gian), và **Environmental Score** (Điểm môi trường).
+- Thang điểm CVSS 3.1: CVSS (Common Vulnerability Scoring System) version 3.1 sử dụng thang điểm từ 0.0 đến 10.0, được phân loại như sau:
+
+| Mức độ    | Điểm số      |
+|-----------|--------------|
+| Nghiêm trọng | 9.0 - 10.0 |
+| Cao       | 7.0 - 8.9   |
+| Trung bình | 4.0 - 6.9   |
+| Thấp      | 0.1 - 3.9   |
+| Không     | 0.0         |
 - Dưới đây là cách đánh giá chi tiết từng yếu tố trong **CVSS 3.1**:
 
 ### 1. **Base Score (Điểm cơ bản)**
