@@ -324,7 +324,101 @@ Kiểm tra và giới hạn đường dẫn: Xác minh rằng các đường d�
 
 Sử dụng các hàm an toàn: Sử dụng các hàm như `basename()` để loại bỏ đường dẫn không hợp lệ.
 
-# Tài liệu tham khảo
+# Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
+- Để đánh giá lỗ hổng máy tính theo **CVSS 3.1 (Common Vulnerability Scoring System)**, bạn sẽ cần đánh giá ba yếu tố chính: **Base Score** (Điểm cơ bản), **Temporal Score** (Điểm thời gian), và **Environmental Score** (Điểm môi trường).
+- Dưới đây là cách đánh giá chi tiết từng yếu tố trong **CVSS 3.1**:
+
+### 1. **Base Score (Điểm cơ bản)**
+Base Score phản ánh mức độ nghiêm trọng của lỗ hổng mà không phụ thuộc vào các yếu tố thay đổi theo thời gian hay môi trường. Để tính toán Base Score, bạn cần đánh giá 3 nhóm yếu tố chính:
+
+- **Attack Vector (Vector tấn công)**  
+  Mô tả cách thức lỗ hổng có thể bị khai thác. 
+  - **Network (N)**: Tấn công từ xa qua mạng (không cần sự can thiệp của người dùng).
+  - **Adjacent Network (A)**: Tấn công từ mạng liền kề (cần kết nối mạng gần).
+  - **Local (L)**: Tấn công cần truy cập trực tiếp vào máy chủ hoặc hệ thống.
+  - **Physical (P)**: Tấn công đụng chạm vật lý vào thiết bị.
+
+- **Attack Complexity (Độ phức tạp tấn công)**  
+  Đánh giá mức độ phức tạp của việc khai thác lỗ hổng.
+  - **Low (L)**: Tấn công dễ thực hiện, không cần kỹ năng cao.
+  - **High (H)**: Tấn công yêu cầu kỹ năng và kiến thức chuyên môn.
+
+- **Privileges Required (Quyền truy cập cần có)**  
+  Đánh giá quyền truy cập cần thiết để khai thác lỗ hổng.
+  - **None (N)**: Không cần quyền truy cập đặc biệt.
+  - **Low (L)**: Cần quyền hạn hạn chế (ví dụ: người dùng bình thường).
+  - **High (H)**: Cần quyền truy cập cao (ví dụ: quản trị viên).
+
+- **User Interaction (Tương tác người dùng)**  
+  Đánh giá mức độ cần thiết của sự can thiệp của người dùng để khai thác lỗ hổng.
+  - **None (N)**: Không cần sự tương tác của người dùng.
+  - **Required (R)**: Cần sự tương tác của người dùng (ví dụ: nhấp vào liên kết độc hại).
+
+- **Scope (Phạm vi)**  
+  Mô tả ảnh hưởng của lỗ hổng đối với hệ thống.
+  - **Unchanged (U)**: Lỗ hổng không thay đổi phạm vi của hệ thống.
+  - **Changed (C)**: Lỗ hổng thay đổi phạm vi hệ thống (ví dụ: từ người dùng sang quản trị viên).
+
+- **Impact (Tác động)**  
+  Đánh giá mức độ ảnh hưởng của lỗ hổng đến bảo mật, quyền riêng tư và tính toàn vẹn của hệ thống.
+  - **Confidentiality (C)**: Mức độ ảnh hưởng đến tính bảo mật thông tin.
+    - **None (N)**, **Low (L)**, **High (H)**
+  - **Integrity (I)**: Mức độ ảnh hưởng đến tính toàn vẹn của dữ liệu.
+    - **None (N)**, **Low (L)**, **High (H)**
+  - **Availability (A)**: Mức độ ảnh hưởng đến khả năng sử dụng hệ thống.
+    - **None (N)**, **Low (L)**, **High (H)**
+
+### 2. **Temporal Score (Điểm thời gian)**
+Temporal Score giúp điều chỉnh Base Score theo sự thay đổi của tình hình thực tế hoặc các biện pháp bảo vệ đã được áp dụng. Bao gồm:
+
+- **Exploitability (Khả năng khai thác)**  
+  Đánh giá mức độ dễ dàng khai thác lỗ hổng.
+  - **Not Defined (ND)**, **Unproven (U)**, **Proof-of-Concept (POC)**, **Functional (F)**, **High (H)**
+
+- **Remediation Level (Mức độ khắc phục)**  
+  Đánh giá mức độ sẵn có của các biện pháp khắc phục.
+  - **Not Defined (ND)**, **Official Fix (O)**, **Temporary Fix (T)**, **Workaround (W)**, **Unavailable (U)**
+
+- **Report Confidence (Độ tin cậy báo cáo)**  
+  Đánh giá độ tin cậy của thông tin về lỗ hổng.
+  - **Not Defined (ND)**, **Unknown (U)**, **Reasonable (R)**, **Confirmed (C)**
+
+### 3. **Environmental Score (Điểm môi trường)**
+Environmental Score điều chỉnh theo cách lỗ hổng ảnh hưởng đến tổ chức và môi trường cụ thể, bao gồm các yếu tố như:
+
+- **Collateral Damage Potential (Tiềm năng tổn thất phụ)**  
+  Đánh giá mức độ tổn thất phụ có thể xảy ra từ việc khai thác lỗ hổng.
+  - **None (N)**, **Low (L)**, **High (H)**
+
+- **Target Distribution (Phân phối mục tiêu)**  
+  Đánh giá tỷ lệ hệ thống hoặc thiết bị bị ảnh hưởng trong môi trường cụ thể.
+  - **None (N)**, **Low (L)**, **High (H)**
+
+- **Security Requirements (Yêu cầu bảo mật)**  
+  Đánh giá mức độ yêu cầu bảo mật của tổ chức đối với các hệ thống và dữ liệu.
+  - **Low (L)**, **Medium (M)**, **High (H)**
+
+### Tính toán điểm:
+Cuối cùng, bạn sẽ sử dụng một công thức để tính toán điểm **Base** dựa trên các yếu tố trên. Sau đó, bạn điều chỉnh điểm này để tính điểm **Temporal** và **Environmental**.
+
+**Base Score:**  
+Chỉ số cơ bản có giá trị từ **0 đến 10** và sẽ phản ánh mức độ nghiêm trọng của lỗ hổng.
+
+**Temporal Score:**  
+Điều chỉnh Base Score với các yếu tố thay đổi theo thời gian.
+
+**Environmental Score:**  
+Điều chỉnh Temporal Score để phản ánh các yếu tố môi trường và tổ chức.
+
+Sau khi tính toán tất cả các điểm, bạn có thể đánh giá mức độ nghiêm trọng của lỗ hổng:
+
+- **0.0-3.9:** Mức độ thấp (Low)
+- **4.0-6.9:** Mức độ trung bình (Medium)
+- **7.0-8.9:** Mức độ cao (High)
+- **9.0-10.0:** Mức độ nghiêm trọng (Critical)
+
+### Kết luận
+CVSS 3.1 cung cấp một cách để đánh giá mức độ nghiêm trọng của các lỗ hổng bảo mật dựa trên các yếu tố kỹ thuật và môi trường cụ thể.
 
 [Tài liệu kiểm thử xâm nhập cho website](https://github.com/NTKien-ptitt/Penetration-Testing-of-Personal-Device-Sales-Website/tree/main/Documents)
 
