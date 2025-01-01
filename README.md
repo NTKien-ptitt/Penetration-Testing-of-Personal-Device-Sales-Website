@@ -1,34 +1,32 @@
-# Kiểm thử Xâm nhập Website Bán Thiết Bị Cá Nhân
-Kiểm thử xâm nhập (penetration testing) là một phương pháp quan trọng trong an ninh thông tin, nhằm xác định và đánh giá các lỗ hổng bảo mật trong một ứng dụng hoặc hệ thống. Trong bối cảnh một website bán thiết bị cá nhân, việc thực hiện kiểm thử xâm nhập không chỉ giúp bảo vệ dữ liệu người dùng mà còn đảm bảo tính toàn vẹn và sẵn sàng của dịch vụ.
+# Mục lục
 
-- [Mục tiêu Kiểm thử Xâm nhập](#muc-tieu-kiem-thu-xam-nhap)
-- [Công cụ sử dụng trong Kiểm thử Xâm nhập](#cong-cu-su-dung-trong-kiem-thu-xam-nhap)
-- [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#Kế-hoạch-Kiểm-thử-Xâm-nhập-cho-Website-Bán-Thiết-Bị-Cá-Nhân-dựa-trên-OWASP-Testing-Guide) 
-- [Các Lỗ Hổng OWASP](#cac-lo-hong-owasp)
-- [Một số Biện pháp Phòng thủ](#mot-so-bien-phap-phong-thu)
+## 1. Kiểm thử Xâm nhập Website Bán Thiết Bị Cá Nhân
+- [Mục tiêu Kiểm thử Xâm nhập](#mục-tiêu-kiểm-thử-xâm-nhập)
+- [Công cụ sử dụng trong Kiểm thử Xâm nhập](#công-cụ-sử-dụng-trong-kiểm-thử-xâm-nhập) 
+- [Kế hoạch Kiểm thử Xâm nhập cho Website Bán Thiết Bị Cá Nhân dựa trên OWASP Testing Guide](#kế-hoạch-kiểm-thử-xâm-nhập-cho-website-bán-thiết-bị-cá-nhân-dựa-trên-owasp-testing-guide)
+- [Các Lỗ Hổng OWASP](#các-lỗ-hổng-owasp)
+- [Một số Biện pháp Phòng thủ](#một-số-biện-pháp-phòng-thủ)
 
-#[Tài liệu tham khảo](#Tài-liệu-tham-khảo)
-
+## 2. Tài liệu tham khảo
 1. [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-
 2. [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing)
+3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/)
 
-3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/).
-
-# Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
-
+## 3. Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
 - [Thang điểm CVSS 3.1](#thang-điểm-cvss-31)
 - [Các nhóm chỉ số chính](#các-nhóm-chỉ-số-chính)
   - [1. Base Metrics Group (Nhóm chỉ số cơ bản)](#1-base-metrics-group-nhóm-chỉ-số-cơ-bản)
-    - [Exploitation Metrics (Chỉ số khai thác)](#exploitation-metrics-chỉ-số-khai-thác) 
+    - [Exploitation Metrics (Chỉ số khai thác)](#exploitation-metrics-chỉ-số-khai-thác)
     - [Impact Metrics (Chỉ số tác động)](#impact-metrics-chỉ-số-tác-động)
-  - [2. Temporal Metrics Group (Nhóm chỉ số thời gian)](#2-temporal-metrics-group-nhóm-chỉ-số-thời-gian)
+  - [2. Temporal Metrics Group (Nhóm chỉ số thời gian)](#2-temporal-metrics-group-nhóm-chỉ-số-thời-gian)  
   - [3. Environmental Metrics Group (Nhóm chỉ số môi trường)](#3-environmental-metrics-group-nhóm-chỉ-số-môi-trường)
     - [Modified Base Metrics](#modified-base-metrics)
     - [Security Requirements (Yêu cầu bảo mật)](#security-requirements-yêu-cầu-bảo-mật)
 - [Công thức tính](#công-thức-tính)
 - [Ví dụ đánh giá](#ví-dụ-đánh-giá)
+
 ---
+
 ## Mục tiêu Kiểm thử Xâm nhập
 - Xác định lỗ hổng bảo mật: Tìm kiếm các điểm yếu trong ứng dụng web có thể bị khai thác bởi kẻ tấn công.
 - Đánh giá rủi ro: Xác định mức độ nghiêm trọng của từng lỗ hổng và khả năng bị khai thác.
