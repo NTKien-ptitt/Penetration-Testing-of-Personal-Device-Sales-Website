@@ -7,7 +7,7 @@
 - [Các Lỗ Hổng OWASP](#các-lỗ-hổng-owasp)
 - [Một số Biện pháp Phòng thủ](#một-số-biện-pháp-phòng-thủ)
 
-## 2. Tài liệu tham khảo
+## 2. Tài liệu tham khảo (Documents)
 1. [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 2. [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing)
 3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/)
