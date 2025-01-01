@@ -13,25 +13,13 @@
 3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/)
 
 ## 3. Đánh giá lỗ hổng theo máy tính theo CVSS 3.1
-1. [Giới thiệu về CVSS 3.1](#giới-thiệu-về-cvss-31)
-2. [Thang điểm CVSS 3.1](#thang-điểm-cvss-31)
-3. [1. Base Score (Điểm cơ bản)](#1-base-score-điểm-cơ-bản)
-   - [Attack Vector (Vector tấn công)](#attack-vector-vector-tấn-công)
-   - [Attack Complexity (Độ phức tạp tấn công)](#attack-complexity-độ-phức-tạp-tấn-công)
-   - [Privileges Required (Quyền truy cập cần có)](#privileges-required-quyền-truy-cập-cần-có)
-   - [User Interaction (Tương tác người dùng)](#user-interaction-tương-tác-người-dùng)
-   - [Scope (Phạm vi)](#scope-phạm-vi)
-   - [Impact (Tác động)](#impact-tác-động)
-4. [2. Temporal Score (Điểm thời gian)](#2-temporal-score-điểm-thời-gian)
-   - [Exploitability (Khả năng khai thác)](#exploitability-khả-năng-khai-thác)
-   - [Remediation Level (Mức độ khắc phục)](#remediation-level-mức-độ-khắc-phục)
-   - [Report Confidence (Độ tin cậy báo cáo)](#report-confidence-độ-tin-cậy-báo-cáo)
-5. [3. Environmental Score (Điểm môi trường)](#3-environmental-score-điểm-môi-trường)
-   - [Collateral Damage Potential (Tiềm năng tổn thất phụ)](#collateral-damage-potential-tiềm-năng-tổn-thất-phụ)
-   - [Target Distribution (Phân phối mục tiêu)](#target-distribution-phân-phối-mục-tiêu)
-   - [Security Requirements (Yêu cầu bảo mật)](#security-requirements-yêu-cầu-bảo-mật)
-6. [Cách tính điểm CVSS 3.1](#cách-tính-điểm-cvss-31)
-7. [Kết luận](#kết-luận)
+- [Giới thiệu về CVSS 3.1](#giới-thiệu-về-cvss-31)
+- [Thang điểm CVSS 3.1](#thang-điểm-cvss-31)
+- [1. Base Score (Điểm cơ bản)](#1-base-score-điểm-cơ-bản)
+- [2. Temporal Score (Điểm thời gian)](#2-temporal-score-điểm-thời-gian)
+- [3. Environmental Score (Điểm môi trường)](#3-environmental-score-điểm-môi-trường)
+- [Cách tính điểm CVSS 3.1](#cách-tính-điểm-cvss-31)
+- [Kết luận](#kết-luận)
 
 ---
 
