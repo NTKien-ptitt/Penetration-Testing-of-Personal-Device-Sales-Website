@@ -15,6 +15,8 @@ Kiểm thử xâm nhập (penetration testing) là một phương pháp quan tr�
 
 3. [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/).
 
+#[Đánh giá lỗ hổng theo máy tính theo CVSS 3.1](#Đánh-giá-lỗ-hổng-theo-máy-tính-theo-CVSS-3.1)
+---
 ## Mục tiêu Kiểm thử Xâm nhập
 - Xác định lỗ hổng bảo mật: Tìm kiếm các điểm yếu trong ứng dụng web có thể bị khai thác bởi kẻ tấn công.
 - Đánh giá rủi ro: Xác định mức độ nghiêm trọng của từng lỗ hổng và khả năng bị khai thác.
