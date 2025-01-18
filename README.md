@@ -21,6 +21,27 @@
 - [Cách tính điểm CVSS 3.1](#cách-tính-điểm-cvss-31)
 - [Kết luận](#kết-luận)
 
+Dưới đây là bảng tổng hợp nội dung bạn yêu cầu:  
+
+| **STT** | **Danh mục** | **Mục con** | **Liên kết** |
+|---------|-------------|-------------|--------------|
+| **1** | **Kiểm thử Xâm nhập Website Bán Thiết Bị Cá Nhân** | Mục tiêu Kiểm thử Xâm nhập | [Mục tiêu Kiểm thử Xâm nhập](#mục-tiêu-kiểm-thử-xâm-nhập) |
+|  |  | Công cụ sử dụng trong Kiểm thử Xâm nhập | [Công cụ sử dụng trong Kiểm thử Xâm nhập](#công-cụ-sử-dụng-trong-kiểm-thử-xâm-nhập) |
+|  |  | Kế hoạch Kiểm thử Xâm nhập theo OWASP Testing Guide | [Kế hoạch Kiểm thử Xâm nhập](#kế-hoạch-kiểm-thử-xâm-nhập-cho-website-bán-thiết-bị-cá-nhân-dựa-trên-owasp-testing-guide) |
+|  |  | Các Lỗ Hổng OWASP | [Các Lỗ Hổng OWASP](#các-lỗ-hổng-owasp) |
+|  |  | Một số Biện pháp Phòng thủ | [Một số Biện pháp Phòng thủ](#một-số-biện-pháp-phòng-thủ) |
+| **2** | **Tài liệu tham khảo (Documents)** | PayloadsAllTheThings | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) |
+|  |  | OWASP Web Security Testing Guide (GitHub) | [OWASP Web Security Testing Guide - GitHub](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing) |
+|  |  | OWASP Web Security Testing Guide (Website) | [OWASP Web Security Testing Guide - Website](https://owasp.org/www-project-web-security-testing-guide/v42/) |
+| **3** | **Đánh giá lỗ hổng theo CVSS 3.1** | Giới thiệu về CVSS 3.1 | [Giới thiệu về CVSS 3.1](#giới-thiệu-về-cvss-31) |
+|  |  | Thang điểm CVSS 3.1 | [Thang điểm CVSS 3.1](#thang-điểm-cvss-31) |
+|  |  | 1. Base Score (Điểm cơ bản) | [Base Score](#1-base-score-điểm-cơ-bản) |
+|  |  | 2. Temporal Score (Điểm thời gian) | [Temporal Score](#2-temporal-score-điểm-thời-gian) |
+|  |  | 3. Environmental Score (Điểm môi trường) | [Environmental Score](#3-environmental-score-điểm-môi-trường) |
+|  |  | Cách tính điểm CVSS 3.1 | [Cách tính điểm CVSS 3.1](#cách-tính-điểm-cvss-31) |
+|  |  | Kết luận | [Kết luận](#kết-luận) |
+
+Bạn cần chỉnh sửa hay bổ sung gì không? 🚀
 ---
 
 ## Mục tiêu Kiểm thử Xâm nhập
