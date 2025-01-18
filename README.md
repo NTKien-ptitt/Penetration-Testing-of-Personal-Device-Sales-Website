@@ -18,7 +18,7 @@
 |  |  | Cách tính điểm CVSS 3.1 | [Cách tính điểm CVSS 3.1](#cách-tính-điểm-cvss-31) |
 |  |  | Kết luận | [Kết luận](#kết-luận) |
 
-Bạn cần chỉnh sửa hay bổ sung gì không? 🚀
+
 ---
 
 ## Mục tiêu Kiểm thử Xâm nhập
